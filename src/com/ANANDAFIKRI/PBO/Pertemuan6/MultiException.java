@@ -4,7 +4,7 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class MultiException {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
         try {
@@ -24,11 +24,10 @@ public class MultiException {
         // }
 
         // Multiple Catch
-        catch(ArithmeticException e){
-             System.out.println("Error weh, Tidak bisa diproses!");
+        catch (ArithmeticException e) {
+            System.out.println("Error weh, Tidak bisa diproses!");
         }
-
-        catch(InputMismatchException e){
+        catch (InputMismatchException e) {
             System.out.println("Masukkan angka saja yooo :)");
         }
 
