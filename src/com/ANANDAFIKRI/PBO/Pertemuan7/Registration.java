@@ -3,6 +3,7 @@ package com.ANANDAFIKRI.PBO.Pertemuan7;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.ComponentAdapter;
 
 public class Registration extends JFrame {
     private JTextField TxtName;
@@ -15,6 +16,7 @@ public class Registration extends JFrame {
     private JButton saveButton;
     private JButton clearButton;
     private JPanel mainPanel;
+    private JLabel BGJenisKelamin;
     private ButtonGroup JK;
 
     public Registration() {
@@ -32,8 +34,8 @@ public class Registration extends JFrame {
                 TxtTelp.setText("");
                 TxtAreaAlamat.setText("");
                 CBProdi.setSelectedIndex(0);
-             //   lakiLakiRadioButton.setSelected(false);
-             //   perempuanRadioButton.setSelected(false);
+                lakiLakiRadioButton.setSelected(false);
+                perempuanRadioButton.setSelected(false);
                 JK.clearSelection();
             }
         });
@@ -59,6 +61,8 @@ public class Registration extends JFrame {
                 JOptionPane.showMessageDialog
                         (null, "Data berhasil disimpan!");
             }
+        });
+        mainPanel.addComponentListener(new ComponentAdapter() {
         });
     }
 
